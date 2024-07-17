@@ -1,0 +1,122 @@
+body {
+  background-color: #111;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.centered-section1, .centered-section2, .centered-section3, .centered-section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0; /* Adjust margin to align with previous section */
+  min-height: 100vh; /* Full viewport height */
+  opacity: 1; /* Set to 1 to make it visible */
+  transform: translateY(0); /* Reset transform to 0 */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.contact-title {
+  font-family: "wild_worldbold";
+  font-size: var(--title-size);
+  line-height: 0.67;
+  margin: 0;
+  color: #ffffff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+  margin-bottom: 6vw;
+  opacity: 1; /* Set to 1 to make it visible */
+  transform: translateY(0); /* Reset transform to 0 */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #888;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 6vw;
+  }
+
+  .form-group label, .form-group input, .form-group textarea, button[type="submit"] {
+    font-size: 4vw;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 8vw; /* Aumentar el tamaño de la fuente */
+    font-weight: 100; /* Hacer la fuente más delgada */
+    -webkit-text-stroke-width: 0.5px; /* Reducir el grosor del contorno */
+  }
+
+  .form-group label, .form-group input, .form-group textarea, button[type="submit"] {
+    font-size: 5vw;
+  }
+
+  button[type="submit"] {
+    padding: 6px 12px;
+  }
+}
